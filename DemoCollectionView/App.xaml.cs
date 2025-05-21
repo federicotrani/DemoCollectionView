@@ -1,4 +1,6 @@
-﻿namespace DemoCollectionView
+﻿using DemoCollectionView.Views;
+
+namespace DemoCollectionView
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new ListaProductosPage();
         }
     }
 }

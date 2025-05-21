@@ -20,11 +20,11 @@ public partial class ListaProductosPage : ContentPage
     {
         ProductosLista = new List<Producto>()
         {
-            new Producto { Id = 1, Nombre = "Pan Salvado MArca", Precio = 10.0f, Stock = 5, Imagen = "pan_salvado.jpg" },
-            new Producto { Id = 2, Nombre = "Producto 2", Precio = 20.0f, Stock = 3, Imagen = "pan_lactal.jpg" },
-            new Producto { Id = 3, Nombre = "Producto 3", Precio = 30.0f, Stock = 8, Imagen = "pan_lactal.jpg" },
-            new Producto { Id = 4, Nombre = "Producto 4", Precio = 40.0f, Stock = 2, Imagen = "imagen4.png" },
-            new Producto { Id = 5, Nombre = "Producto 5", Precio = 50.0f, Stock = 10, Imagen = "imagen5.png" }
+            new Producto { Id = 1, Nombre = "Pan Salvado", Precio = 1500, Stock = 5, Imagen = "pan_salvado.jpg" },
+            new Producto { Id = 2, Nombre = "Pan Lactal", Precio = 1800, Stock = 3, Imagen = "pan_lactal.jpg" },
+            new Producto { Id = 3, Nombre = "Tomate Perita", Precio = 2800, Stock = 8, Imagen = "Tomate Perita.jpg" },
+            new Producto { Id = 4, Nombre = "Yerba Taragui", Precio = 3145, Stock = 2, Imagen = "yerba_taragui.jpg" },
+            new Producto { Id = 5, Nombre = "Yerba Rosamonte", Precio = 3266, Stock = 10, Imagen = "yerba_rosamonte.jpg" }
         };
     }
 }
