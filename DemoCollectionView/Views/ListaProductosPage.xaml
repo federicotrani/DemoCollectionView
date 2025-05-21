@@ -4,22 +4,25 @@
              x:Class="DemoCollectionView.Views.ListaProductosPage"
              xmlns:models="clr-namespace:DemoCollectionView.Models"
              Title="ListaProductos">
-    <VerticalStackLayout>
-
-        <CollectionView ItemsSource="{Binding ProductosLista}" SelectedItem="{Binding productoSeleccionado}" SelectionMode="Single">
+    <ScrollView>
+    <VerticalStackLayout Margin="10">
+        <CollectionView ItemsSource="{Binding ProductosLista}" SelectedItem="{Binding productoSeleccionado}" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged">
             
             <CollectionView.ItemTemplate >
-                <DataTemplate>
-                    <Grid RowDefinitions="*,*" ColumnDefinitions="Auto, .2*, .1*">
-                        <Image Source="{Binding Imagen}" Grid.Column="0" Grid.RowSpan="2" Aspect="AspectFill"/>
+                <DataTemplate x:DataType="models:Producto">
+                        <Border >
+                            <Grid RowDefinitions="*,*" ColumnDefinitions="Auto, .2*, .1*" BackgroundColor="Azure">
+                            
+                        
+                        <Image Source="{Binding Imagen}" Grid.Column="0" Grid.RowSpan="2" Aspect="AspectFill" WidthRequest="100"/>
                         <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="0" FontSize="20" />
-                        <Label Text="{Binding Precio}" Grid.Column="1" Grid.Row="0" FontSize="14" />
-                    </Grid>
+                        <Label Text="{Binding Precio, StringFormat='${0:}'}" Grid.Column="1" Grid.Row="1" FontSize="14" TextColor="DarkBlue" />
+                        </Grid>
+                       </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
-
             
         </CollectionView>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
